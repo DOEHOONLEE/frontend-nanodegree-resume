@@ -3,13 +3,13 @@ var bio = {
     "name": "Doe Hoon Lee",
     "role": "Front-End Developer",
     "contacts": {
-        "mobile": "604 - 000 - 0000",
+        "mobile": "+82-10-5737-2421",
         "email": "genesisparadox@gmail.com",
         "github": "https://github.com/DOEHOONLEE",
-        "location": "Vancouver, Canada"
+        "location": "Seoul, Korea"
     },
     "welcomeMessage": "Hello. This is my online resume. Here, you can find out.. <br>&#183; what I like to do <br>&#183; what skills I have <br>&#183; what projects I have worked on <br>&#183; education background <br>&#183; contact information",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; Python", "&#183; Japanese", "&#183; English", "&#183; Korean"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python", "&#183; Japanese", "&#183; English", "&#183; Korean"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -77,17 +77,17 @@ var projects = {
 
 var certificates = {
     "certificates": [{
-        "title": "ASL",
-        "issuedBy": "start ASL",
-        "date": "ongoing - expected end date : 2017  Spring",
-        "description": "American Sign Language",
-        "url": "https://www.startasl.com/learn-asl-online"
-    }, {
         "title": "Medical Neuroscience",
         "issuedBy": "Duke University",
         "date": "ongoing - expected end date : 2017  Spring",
         "description": "Online course about medical neuroscience",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
+    }, {
+        "title": "Mobile Application development Professional - Class 1",
+        "issuedBy": "KAIT Korea Association for ICT Promotion",
+        "date": "Prepartion for the exam on March-2017",
+        "description": "Developing Mobile application",
+        "url": "http://www.ihd.or.kr/guidemap.do"
     }, {
         "title": "CPR/AED-HCP",
         "issuedBy": "CANADIAN RED CROSS",

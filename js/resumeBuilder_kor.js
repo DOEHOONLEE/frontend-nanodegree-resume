@@ -3,13 +3,13 @@ var bio = {
     "name": "이도훈",
     "role": "프론트엔드 개발자",
     "contacts": {
-        "mobile": "010 - 000 - 0000",
+        "mobile": "010 - 5737 - 2421",
         "email": "genesisparadox@gmail.com",
         "github": "https://github.com/DOEHOONLEE",
-        "location": "대한민국 서울"
+        "location": "대한민국, 서울"
     },
     "welcomeMessage": "온라인 이력서 입니다. <br>&#183; 내가 좋아하는 것들 <br>&#183; 기술들 <br>&#183; 진행한 프로젝트 <br>&#183; 학력 <br>&#183; 연락처",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; Python", "&#183; 일본어", "&#183; 영어", "&#183; 한국어"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python", "&#183; 일본어", "&#183; 영어", "&#183; 한국어"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -77,17 +77,17 @@ var projects = {
 
 var certificates = {
     "certificates": [{
-        "title": "ASL - 미식 수화",
-        "issuedBy": "start ASL",
-        "date": "현재 진행중 - 예정 완료일: 2017년 봄",
-        "description": "American Sign Language - 영어 수화",
-        "url": "https://www.startasl.com/learn-asl-online"
-    }, {
         "title": "신경 의학",
         "issuedBy": "Duke University",
         "date": "현재 진행중 - 예정 완료일: 2017년 봄",
         "description": "신경 의학을 다루는 인터넷 강의 수료",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
+    }, {
+        "title": "모바일 앱 개발전문가 - 1급",
+        "issuedBy": "KAIT 한국정보통신진흥협회",
+        "date": "현재 시험 대비중 - 시험 날짜: 2017년 3월",
+        "description": "모바일 앱 제작/기술 관련",
+        "url": "http://www.ihd.or.kr/guidemap.do"
     }, {
         "title": "CPR/AED-HCP : 인공호흡/ 자동 제세동기",
         "issuedBy": "CANADIAN RED CROSS - 캐나다 적십자",
