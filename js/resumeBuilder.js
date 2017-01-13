@@ -18,8 +18,8 @@ var education = {
     "schools": [{
         "name": "Simon Fraser University",
         "location": "Burnaby, CANADA",
-        "degree": "B.A.",
-        "majors": ["Cognitive Science"],
+        "degree": "B.Sc",
+        "majors": ["Environmental Science"],
         "dates": "2015 - current",
         "url": "http://www.sfu.ca/"
     }, {
@@ -70,6 +70,12 @@ var projects = {
         "description": "If you would like to do some volunteer work in other countries, check this out! Find out the price, destinations, and positions here",
         "images": ["images/volunteer_abroad.png"],
         "url": "https://doehoonlee.github.io/RED-Academy-project-1/"
+    }, {
+        "title": "Classic Arcade Game",
+        "dates": "2017 - January",
+        "description": "This is a classic arcade game, the frogger!",
+        "images": ["images/classic_arcade.png"],
+        "url": "https://doehoonlee.github.io/frontend-nanodegree-arcade-game/"
     }]
 };
 

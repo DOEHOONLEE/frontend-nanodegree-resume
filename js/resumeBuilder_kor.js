@@ -19,7 +19,7 @@ var education = {
         "name": "Simon Fraser University",
         "location": "버나비, 캐나다",
         "degree": "학사 학위",
-        "majors": ["인지과학"],
+        "majors": ["환경 과학"],
         "dates": "2015 - current",
         "url": "http://www.sfu.ca/"
     }, {
@@ -33,7 +33,7 @@ var education = {
     "onlineCourses": [{
         "title": "Front-End Nanodegree",
         "school": "Udacity",
-        "dates": "현재 진행중 - 예정 졸업일: 2017년 봄",
+        "dates": "현재 진행중 - 예정 수료일: 2017년 봄",
         "url": "https://www.udacity.com/"
     }]
 };
@@ -70,6 +70,12 @@ var projects = {
         "description": "다른 해외봉사 회사들을 간략하게 소개하고 있습니다",
         "images": ["images/volunteer_abroad.png"],
         "url": "https://doehoonlee.github.io/RED-Academy-project-1/"
+    }, {
+        "title": "아케이드 게임",
+        "dates": "2017 - January",
+        "description": "캐릭터를 조종하여 적들을 피해 목적지에 도달하는 게임 입니다",
+        "images": ["images/classic_arcade.png"],
+        "url": "https://doehoonlee.github.io/frontend-nanodegree-arcade-game/"
     }]
 };
 
