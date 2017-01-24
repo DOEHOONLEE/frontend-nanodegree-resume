@@ -178,7 +178,7 @@ education.display = function() {
 
 // display 'education'
 education.display();
-
+/*
 // display function 'work'
 work.display = function() {
     for (job = 0; job < work.jobs.length; job++) {
@@ -199,7 +199,7 @@ work.display = function() {
 
 //display 'work'
 work.display();
-
+*/
 // display function 'project'
 
 projects.display = function() {
