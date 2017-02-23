@@ -25,11 +25,11 @@ body {
 
 .education-entry,
 .work-entry,
-.project-entry, .certificates-entry, .activities-entry {
+.project-entry, .certificates-entry, .hobbies-entry {
   padding: 0 5%;
 }
 
-.activities-entry p {
+.hobbies-entry p {
     line-height: 10px;
     margin-bottom: 10px;
 }

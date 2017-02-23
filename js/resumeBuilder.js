@@ -104,9 +104,21 @@ var certificates = {
         "description": "Online course about medical neuroscience",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
     }, {
+        "title": "Type 1 Driver's licence",
+        "issuedBy": "",
+        "date": "Ongoing : expected to end in March, 2017",
+        "description": "Eligible for driving heavy machineries, bus, truck",
+        "url": ""
+    }, {
+        "title": "GTQ - Photoshop",
+        "issuedBy": "KPC",
+        "date": "Preparing for the certificate examination in March, 2017",
+        "description": "Internationally recognized photoshop licence",
+        "url": "http://www.gtq.or.kr/"
+    }, {
         "title": "Mobile Application development Professional - Class 1",
         "issuedBy": "KAIT Korea Association for ICT Promotion",
-        "date": "Preparing for the exam on March-2017",
+        "date": "Preparing for the certificate examination in March, 2017",
         "description": "Developing Mobile application",
         "url": "http://www.ihd.or.kr/guidemap.do"
     }, {
@@ -123,12 +135,24 @@ var certificates = {
 var activities ={
     "activities": [{
         "name": "Badminton",
-        "description": " - ",
+        "description": "Joined school and private badminton clubs. Occasionally played in tournaments.",
         "url": "https://en.wikipedia.org/wiki/Badminton"
+    }, {
+        "name": "Go",
+        "description": "Was in a Go club in elementary school, but recently started learning again.",
+        "url": "https://en.wikipedia.org/wiki/Go_(game)"
+    }, {
+        "name": "ASL",
+        "description": "Learning American Sign Language!",
+        "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
     }],
     "plans": [{
-        "title": "Plan title",
-        "description": " - ",
+        "title": "Volunteer activities in other countries",
+        "description": "I have always wanted to do some volunteering work in other countries such as working near doctors or even building new homes for people who have lost theirs due to natural disaster.",
+        "url": ""
+    }, {
+        "title": "Learn how to play the piano",
+        "description": "I had to quit learning because of some issues when I was a child. Not pursuing left me a hole in my heart. I would like to start learning again soon.",
         "url": ""
     }]
 };
@@ -307,32 +331,32 @@ certificates.display();
 
 // display function 'hobbies'
 
-hobbies.display = function() {
-    $("#hobbiesAndPlans").append(HTMLhobbies);
-    for (hobby = 0; hobby < hobbies.hobbies.length; hobby++) {
-        $("#hobbiesAndPlans").append(HTMLhobbiesStart);
+activities.display = function() {
+    $("#activitiesAndPlans").append(HTMLhobbies);
+    for (hobby = 0; hobby < activities.activities.length; hobby++) {
+        $("#activitiesAndPlans").append(HTMLhobbiesStart);
         
-        var formattedName = HTMLhobbiesName.replace("%data%", hobbies.hobbies[hobby].name);
+        var formattedName = HTMLhobbiesName.replace("%data%", activities.activities[hobby].name);
         $(".hobbies-entry:last").append(formattedName);
         
-        var formattedDescription = HTMLhobbiesDescription.replace("%data%", hobbies.hobbies.description);
+        var formattedDescription = HTMLhobbiesDescription.replace("%data%", activities.activities[hobby].description);
         $(".hobbies-entry:last").append(formattedDescription);
     }
     
-    $("#hobbiesAndPlans").append(HTMLplans);
-    for (plan = 0; plan < hobbies.plans.length; plan++) {
-        $("#hobbiesAndPlans").append(HTMLplansStart);
+    $("#activitiesAndPlans").append(HTMLplans);
+    for (plan = 0; plan < activities.plans.length; plan++) {
+        $("#activitiesAndPlans").append(HTMLplansStart);
         
-        var formattedTitle = HTMLplansTitle.replace("%data%", hobbies.plans[plan].title);
+        var formattedTitle = HTMLplansTitle.replace("%data%", activities.plans[plan].title);
         $(".hobbies-entry:last").append(formattedTitle);
         
-        var formattedDescription = HTMLplansDescription.replace("%data%", hobbies.plans[plan].description);
+        var formattedDescription = HTMLplansDescription.replace("%data%", activities.plans[plan].description);
         $(".hobbies-entry:last").append(formattedDescription);
     }
 };
 
 // display 'hobbies'
-hobbies.display();
+activities.display();
 
 // mouse click coordinate finder
 $(document).click(function(loc) {
