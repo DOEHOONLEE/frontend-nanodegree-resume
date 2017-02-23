@@ -37,7 +37,7 @@ var education = {
         "url": "https://www.udacity.com/"
     }]
 };
-
+/*
 // object 'work'
 var work = {
     "jobs": [{
@@ -48,7 +48,7 @@ var work = {
         "location": "Seoul"
     }]
 };
-
+*/
 // object 'projects'
 
 var projects = {
