@@ -130,6 +130,33 @@ var certificates = {
     }]
 };
 
+// object 'activities & plans'
+
+var activities ={
+    "activities": [{
+        "name": "배드민턴",
+        "description": "교내/외 배드민턴 클럽에서 활동. 가끔 대회에 참여함",
+        "url": "https://en.wikipedia.org/wiki/Badminton"
+    }, {
+        "name": "바둑",
+        "description": "초등학교 시절 1년간 배웠던 바둑을 최근에 다시 시작함",
+        "url": "https://en.wikipedia.org/wiki/Go_(game)"
+    }, {
+        "name": "ASL",
+        "description": "영어 수화를 공부 중",
+        "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
+    }],
+    "plans": [{
+        "title": "해외 봉사",
+        "description": "의료 봉사 또는 집짓기 프로젝트에 참여",
+        "url": ""
+    }, {
+        "title": "피아노 배우기",
+        "description": "어린시절 중도 그만두어야 했던 피아노를 다시 배움",
+        "url": ""
+    }]
+};
+
 // display function 'bio'
 bio.display = function() {
     // prepend header role
@@ -305,6 +332,35 @@ certificates.display = function() {
 
 // display 'certificates'
 certificates.display();
+
+// display function 'hobbies'
+
+activities.display = function() {
+    $("#activitiesAndPlans").append(HTMLhobbies);
+    for (hobby = 0; hobby < activities.activities.length; hobby++) {
+        $("#activitiesAndPlans").append(HTMLhobbiesStart);
+        
+        var formattedName = HTMLhobbiesName.replace("%data%", activities.activities[hobby].name);
+        $(".hobbies-entry:last").append(formattedName);
+        
+        var formattedDescription = HTMLhobbiesDescription.replace("%data%", activities.activities[hobby].description);
+        $(".hobbies-entry:last").append(formattedDescription);
+    }
+    
+    $("#activitiesAndPlans").append(HTMLplans);
+    for (plan = 0; plan < activities.plans.length; plan++) {
+        $("#activitiesAndPlans").append(HTMLplansStart);
+        
+        var formattedTitle = HTMLplansTitle.replace("%data%", activities.plans[plan].title);
+        $(".hobbies-entry:last").append(formattedTitle);
+        
+        var formattedDescription = HTMLplansDescription.replace("%data%", activities.plans[plan].description);
+        $(".hobbies-entry:last").append(formattedDescription);
+    }
+};
+
+// display 'hobbies'
+activities.display();
 
 // mouse click coordinate finder
 $(document).click(function(loc) {
