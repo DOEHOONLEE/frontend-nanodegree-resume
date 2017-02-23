@@ -9,7 +9,7 @@ var bio = {
         "location": "대한민국, 서울"
     },
     "welcomeMessage": "온라인 이력서 입니다. <br>&#183; 내가 좋아하는 것들 <br>&#183; 기술들 <br>&#183; 진행한 프로젝트 <br>&#183; 학력 <br>&#183; 연락처",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python", "&#183; 일본어", "&#183; 영어", "&#183; 한국어"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python", "&#183; Photoshop", "&#183; Illustrator", "&#183; 일본어", "&#183; 영어", "&#183; 한국어"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -18,7 +18,7 @@ var education = {
     "schools": [{
         "name": "Simon Fraser University",
         "location": "버나비, 캐나다",
-        "degree": "학사 학위",
+        "degree": "학사 학위 - 인지과학으로 전과하기 위하여 심리학, 컴퓨터, 인지과학 과목들을 수강하였습니다.",
         "majors": ["환경 과학"],
         "dates": "2015 - current",
         "url": "http://www.sfu.ca/"
@@ -30,10 +30,25 @@ var education = {
         "dates": "2014",
         "url": "http://langara.ca/index.html"
     }],
+    "schoolsTwo": [{
+        "course": "웹개발 기초 과정",
+        "name": "RED Academy",
+        "location": "Seoul, Korea",
+        "dates": "2016 - Sept",
+        "description": "웹개발 기초반. HTML5, CSS3, 반응형 웹, Git and GitHub, UX&Wireframing, JavaScript, jQuery, LESS",
+        "url": "https://www.redacademy.com/"
+    }, {
+        "course": "그래픽스 - 포토샵/ 일러스트 과정",
+        "name": "더조은컴퓨터아트학원",
+        "location": "Seoul, KOREA",
+        "dates": "2017 - Feb",
+        "description" : " - Foundation course for using photoshop and illustrator",
+        "url": "http://www.tjoeun.co.kr/"
+    }],
     "onlineCourses": [{
-        "title": "Front-End Nanodegree",
+        "title": "프론트엔드 개발",
         "school": "Udacity",
-        "dates": "현재 진행중 - 예정 수료일: 2017년 봄",
+        "dates": "현재 진행중 - 2017년 봄 완료 예정",
         "url": "https://www.udacity.com/"
     }]
 };
@@ -85,9 +100,15 @@ var certificates = {
     "certificates": [{
         "title": "신경 의학",
         "issuedBy": "Duke University",
-        "date": "현재 진행중 - 예정 완료일: 2017년 봄",
+        "date": "일시정지 - 예정 완료일: 2017년 여름",
         "description": "신경 의학을 다루는 인터넷 강의 수료",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
+    }, {
+        "title": "1종 대형 면허",
+        "issuedBy": "",
+        "date": "2017년 3월 수료 예정",
+        "description": "화물자동차, 건설기계, 특수 자동차 등 운전 가능",
+        "url": "koroad.or.kr"
     }, {
         "title": "모바일 앱 개발전문가 - 1급",
         "issuedBy": "KAIT 한국정보통신진흥협회",
@@ -106,6 +127,33 @@ var certificates = {
         "date": "2016 - Sept",
         "description": "웹개발 기초반. HTML5, CSS3, 반응형 웹, Git and GitHub, UX&Wireframing, JavaScript, jQuery, LESS",
         "url": "https://www.redacademy.com/"
+    }]
+};
+
+// object 'activities & plans'
+
+var activities ={
+    "activities": [{
+        "name": "배드민턴",
+        "description": "교내/외 배드민턴 클럽에서 활동. 가끔 대회에 참여함",
+        "url": "https://en.wikipedia.org/wiki/Badminton"
+    }, {
+        "name": "바둑",
+        "description": "초등학교 시절 1년간 배웠던 바둑을 최근에 다시 시작함",
+        "url": "https://en.wikipedia.org/wiki/Go_(game)"
+    }, {
+        "name": "ASL",
+        "description": "영어 수화를 공부 중",
+        "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
+    }],
+    "plans": [{
+        "title": "해외 봉사",
+        "description": "의료 봉사 또는 집짓기 프로젝트에 참여",
+        "url": ""
+    }, {
+        "title": "피아노 배우기",
+        "description": "어린시절 중도 그만두어야 했던 피아노를 다시 배움",
+        "url": ""
     }]
 };
 
@@ -145,6 +193,7 @@ bio.display();
 
 // display function 'education'
 education.display = function() {
+    $("#education").append(HTMLcolleges);
     for (school = 0; school < education.schools.length; school++) {
         $("#education").append(HTMLschoolStart);
 
@@ -165,10 +214,33 @@ education.display = function() {
 
         $(".education-entry:last a").attr("href", education.schools[school].url);
     }
+    
+    $("#education").append(HTMLotherEducations);
+    for (schoolTwo = 0; schoolTwo < education.schoolsTwo.length; schoolTwo++) {
+        $("#education").append(HTMLschoolTwoStart);
 
+        var formattedTwoCourse = HTMLschoolTwoCourse.replace("%data%", education.schoolsTwo[schoolTwo].course);
+        var formattedTwoName = HTMLschoolTwoName.replace("%data%", education.schoolsTwo[schoolTwo].name);
+
+        var formattedTwoCourseName = formattedTwoCourse + formattedTwoName;
+        $(".education-entry:last").append(formattedTwoCourseName);
+        
+        var formattedDescription = HTMLschoolTwoDescription.replace("%data%", education.schoolsTwo[schoolTwo].description);
+        $(".education-entry:last").append(formattedDescription);
+
+        var formattedTwoDates = HTMLschoolTwoDates.replace("%data%", education.schoolsTwo[schoolTwo].dates);
+        $(".education-entry:last").append(formattedTwoDates);
+
+        var formattedTwoLocation = HTMLschoolTwoLocation.replace("%data%", education.schoolsTwo[schoolTwo].location);
+        $(".education-entry:last").append(formattedTwoLocation);
+
+        $(".education-entry:last a").attr("href", education.schoolsTwo[schoolTwo].url);
+    }
+    
+    $("#education").append(HTMLonlineClasses);
     for (online = 0; online < education.onlineCourses.length; online++) {
-        $(".education-entry:last").append(HTMLonlineClasses);
 
+        $("#education").append(HTMLonlineClassesStart);
         var formattedcourseTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
         $(".education-entry:last").append(formattedcourseTitle);
 
@@ -260,6 +332,35 @@ certificates.display = function() {
 
 // display 'certificates'
 certificates.display();
+
+// display function 'hobbies'
+
+activities.display = function() {
+    $("#activitiesAndPlans").append(HTMLhobbies);
+    for (hobby = 0; hobby < activities.activities.length; hobby++) {
+        $("#activitiesAndPlans").append(HTMLhobbiesStart);
+        
+        var formattedName = HTMLhobbiesName.replace("%data%", activities.activities[hobby].name);
+        $(".hobbies-entry:last").append(formattedName);
+        
+        var formattedDescription = HTMLhobbiesDescription.replace("%data%", activities.activities[hobby].description);
+        $(".hobbies-entry:last").append(formattedDescription);
+    }
+    
+    $("#activitiesAndPlans").append(HTMLplans);
+    for (plan = 0; plan < activities.plans.length; plan++) {
+        $("#activitiesAndPlans").append(HTMLplansStart);
+        
+        var formattedTitle = HTMLplansTitle.replace("%data%", activities.plans[plan].title);
+        $(".hobbies-entry:last").append(formattedTitle);
+        
+        var formattedDescription = HTMLplansDescription.replace("%data%", activities.plans[plan].description);
+        $(".hobbies-entry:last").append(formattedDescription);
+    }
+};
+
+// display 'hobbies'
+activities.display();
 
 // mouse click coordinate finder
 $(document).click(function(loc) {

@@ -139,6 +139,7 @@ bio.display();
 
 // display function 'education'
 education.display = function() {
+    $("#education").append(HTMLcolleges);
     for (school = 0; school < education.schools.length; school++) {
         $("#education").append(HTMLschoolStart);
 
@@ -159,10 +160,33 @@ education.display = function() {
 
         $(".education-entry:last a").attr("href", education.schools[school].url);
     }
+    
+    $("#education").append(HTMLotherEducations);
+    for (schoolTwo = 0; schoolTwo < education.schoolsTwo.length; schoolTwo++) {
+        $("#education").append(HTMLschoolTwoStart);
 
+        var formattedTwoCourse = HTMLschoolTwoCourse.replace("%data%", education.schoolsTwo[schoolTwo].course);
+        var formattedTwoName = HTMLschoolTwoName.replace("%data%", education.schoolsTwo[schoolTwo].name);
+
+        var formattedTwoCourseName = formattedTwoCourse + formattedTwoName;
+        $(".education-entry:last").append(formattedTwoCourseName);
+        
+        var formattedDescription = HTMLschoolTwoDescription.replace("%data%", education.schoolsTwo[schoolTwo].description);
+        $(".education-entry:last").append(formattedDescription);
+
+        var formattedTwoDates = HTMLschoolTwoDates.replace("%data%", education.schoolsTwo[schoolTwo].dates);
+        $(".education-entry:last").append(formattedTwoDates);
+
+        var formattedTwoLocation = HTMLschoolTwoLocation.replace("%data%", education.schoolsTwo[schoolTwo].location);
+        $(".education-entry:last").append(formattedTwoLocation);
+
+        $(".education-entry:last a").attr("href", education.schoolsTwo[schoolTwo].url);
+    }
+    
+    $("#education").append(HTMLonlineClasses);
     for (online = 0; online < education.onlineCourses.length; online++) {
-        $(".education-entry:last").append(HTMLonlineClasses);
 
+        $("#education").append(HTMLonlineClassesStart);
         var formattedcourseTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
         $(".education-entry:last").append(formattedcourseTitle);
 
