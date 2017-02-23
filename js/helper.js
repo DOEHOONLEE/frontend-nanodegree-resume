@@ -38,6 +38,29 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
+var HTMLcolleges = '<h3>Colleges</h3>';
+var HTMLschoolStart = '<div class="education-entry"></div>';
+var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
+var HTMLotherEducations = '<h3>Other Educations</h3>';
+var HTMLschoolTwoStart = '<div class="education-entry"></div>';
+var HTMLschoolTwoCourse = '<a href="#">%data%';
+var HTMLschoolTwoName = ' at %data%</a>';
+var HTMLschoolTwoDates = '<div class="date-text">%data%</div>';
+var HTMLschoolTwoLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolTwoDescription = '<p>%data%</p>';
+
+var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClassesStart = '<div class="education-entry"></div>';
+var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
@@ -50,22 +73,18 @@ var HTMLcertificatesIssuedBy = '<span class="issued_by"> -issued by</span><span>
 var HTMLcertificatesDates = '<div class="date-text">%data%</div>';
 var HTMLcertificatesDescription = '<p><br>%data%</p>';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLhobbies = '<h3>My hobbies</h3>';
+var HTMLhobbiesStart = '<div class="hobbies-entry"></div>';
+var HTMLhobbiesName = '<a href="#">%data%</a>';
+var HTMLhobbiesDescription = '<p><br>%data%</p>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLplans = '<h3>My plans</h3>'
+var HTMLplansStart = '<div class="hobbies-entry"></div>';
+var HTMLplansTitle = '<a href="#">%data%</a>';
+var HTMLplansDescription = '<p><br>%data%</p>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
-
 
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.

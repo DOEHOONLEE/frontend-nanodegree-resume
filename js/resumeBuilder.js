@@ -9,7 +9,7 @@ var bio = {
         "location": "Seoul, Korea"
     },
     "welcomeMessage": "Hello. This is my online resume. Here, you can find out.. <br>&#183; what I like to do <br>&#183; what skills I have <br>&#183; what projects I have worked on <br>&#183; education background <br>&#183; contact information",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python", "&#183; Japanese", "&#183; English", "&#183; Korean"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python","&#183; Photoshop", "&#183; Illustrator", "&#183; Japanese", "&#183; English", "&#183; Korean"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -18,7 +18,7 @@ var education = {
     "schools": [{
         "name": "Simon Fraser University",
         "location": "Burnaby, CANADA",
-        "degree": "B.Sc",
+        "degree": "B.Sc - been taking psychology, cognitive sicence, computing science courses to transfer to 'Cognitive Science' program",
         "majors": ["Environmental Science"],
         "dates": "2015 - current",
         "url": "http://www.sfu.ca/"
@@ -29,6 +29,21 @@ var education = {
         "majors": ["General Science"],
         "dates": "2014",
         "url": "http://langara.ca/index.html"
+    }],
+    "schoolsTwo": [{
+        "course": "Web Developer Foundation course",
+        "name": "RED Academy",
+        "location": "Vancouver, CANADA",
+        "dates": "2016, July - Sept",
+        "description" : " - Web Development Foundation course. HTML5, CSS3, Responsive Web Design, Git and GitHub, UX&Wireframing, JavaScript, jQuery, LESS",
+        "url": "https://www.redacademy.com/"
+    }, {
+        "course": "Graphics - Photoshop/ illustrator course",
+        "name": "THEJOEUN",
+        "location": "Seoul, KOREA",
+        "dates": "2017, Feb",
+        "description" : " - Foundation course for using photoshop and illustrator",
+        "url": "http://www.tjoeun.co.kr/"
     }],
     "onlineCourses": [{
         "title": "Front-End Nanodegree",
@@ -53,7 +68,7 @@ var work = {
 
 var projects = {
     "projects": [{
-        "title": "Portfolio",
+        "title": "Portfolio Website",
         "dates": "2016 - November",
         "description": "This is my portfolio website.",
         "images": ["images/portfolio.png"],
@@ -85,13 +100,13 @@ var certificates = {
     "certificates": [{
         "title": "Medical Neuroscience",
         "issuedBy": "Duke University",
-        "date": "ongoing - expected end date : 2017  Spring",
+        "date": "Paused for now - expected end date : 2017 summer",
         "description": "Online course about medical neuroscience",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
     }, {
         "title": "Mobile Application development Professional - Class 1",
         "issuedBy": "KAIT Korea Association for ICT Promotion",
-        "date": "Prepartion for the exam on March-2017",
+        "date": "Preparing for the exam on March-2017",
         "description": "Developing Mobile application",
         "url": "http://www.ihd.or.kr/guidemap.do"
     }, {
@@ -100,12 +115,21 @@ var certificates = {
         "date": "2016 - November",
         "description": "CPR-Health Care Provider & AED Courses",
         "url": "https://vancouverfirstaid.ca/"
-    }, {
-        "title": "Web Developer Foundation",
-        "issuedBy": "RED Academy",
-        "date": "2016 - Sept",
-        "description": "Web Development Foundation course. HTML5, CSS3, Responsive Web Design, Git and GitHub, UX&Wireframing, JavaScript, jQuery, LESS",
-        "url": "https://www.redacademy.com/"
+    }]
+};
+
+// object 'activities & plans'
+
+var activities ={
+    "activities": [{
+        "name": "Badminton",
+        "description": " - ",
+        "url": "https://en.wikipedia.org/wiki/Badminton"
+    }],
+    "plans": [{
+        "title": "Plan title",
+        "description": " - ",
+        "url": ""
     }]
 };
 
@@ -145,6 +169,7 @@ bio.display();
 
 // display function 'education'
 education.display = function() {
+    $("#education").append(HTMLcolleges);
     for (school = 0; school < education.schools.length; school++) {
         $("#education").append(HTMLschoolStart);
 
@@ -165,10 +190,33 @@ education.display = function() {
 
         $(".education-entry:last a").attr("href", education.schools[school].url);
     }
+    
+    $("#education").append(HTMLotherEducations);
+    for (schoolTwo = 0; schoolTwo < education.schoolsTwo.length; schoolTwo++) {
+        $("#education").append(HTMLschoolTwoStart);
 
+        var formattedTwoCourse = HTMLschoolTwoCourse.replace("%data%", education.schoolsTwo[schoolTwo].course);
+        var formattedTwoName = HTMLschoolTwoName.replace("%data%", education.schoolsTwo[schoolTwo].name);
+
+        var formattedTwoCourseName = formattedTwoCourse + formattedTwoName;
+        $(".education-entry:last").append(formattedTwoCourseName);
+        
+        var formattedDescription = HTMLschoolTwoDescription.replace("%data%", education.schoolsTwo[schoolTwo].description);
+        $(".education-entry:last").append(formattedDescription);
+
+        var formattedTwoDates = HTMLschoolTwoDates.replace("%data%", education.schoolsTwo[schoolTwo].dates);
+        $(".education-entry:last").append(formattedTwoDates);
+
+        var formattedTwoLocation = HTMLschoolTwoLocation.replace("%data%", education.schoolsTwo[schoolTwo].location);
+        $(".education-entry:last").append(formattedTwoLocation);
+
+        $(".education-entry:last a").attr("href", education.schoolsTwo[schoolTwo].url);
+    }
+    
+    $("#education").append(HTMLonlineClasses);
     for (online = 0; online < education.onlineCourses.length; online++) {
-        $(".education-entry:last").append(HTMLonlineClasses);
 
+        $("#education").append(HTMLonlineClassesStart);
         var formattedcourseTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
         $(".education-entry:last").append(formattedcourseTitle);
 
@@ -189,20 +237,16 @@ education.display();
 work.display = function() {
     for (job = 0; job < work.jobs.length; job++) {
         $("#workExperience").append(HTMLworkStart);
-
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
         var formattedEmployerTitle = formattedEmployer + formattedTitle;
         $(".work-entry:last").append(formattedEmployerTitle);
-
         var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         $(".work-entry:last").append(formattedDates);
-
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);
     }
 };
-
 //display 'work'
 work.display();
 */
@@ -241,7 +285,7 @@ projects.display();
 certificates.display = function() {
     for (certificate = 0; certificate < certificates.certificates.length; certificate++) {
         $("#certificates").append(HTMLcertificatesStart);
-        //title issuedBy date description
+        
         var formattedTitle = HTMLcertificatesTitle.replace("%data%", certificates.certificates[certificate].title);
         var formattedIssuedBy = HTMLcertificatesIssuedBy.replace("%data%", certificates.certificates[certificate].issuedBy);
 
@@ -260,6 +304,35 @@ certificates.display = function() {
 
 // display 'certificates'
 certificates.display();
+
+// display function 'hobbies'
+
+hobbies.display = function() {
+    $("#hobbiesAndPlans").append(HTMLhobbies);
+    for (hobby = 0; hobby < hobbies.hobbies.length; hobby++) {
+        $("#hobbiesAndPlans").append(HTMLhobbiesStart);
+        
+        var formattedName = HTMLhobbiesName.replace("%data%", hobbies.hobbies[hobby].name);
+        $(".hobbies-entry:last").append(formattedName);
+        
+        var formattedDescription = HTMLhobbiesDescription.replace("%data%", hobbies.hobbies.description);
+        $(".hobbies-entry:last").append(formattedDescription);
+    }
+    
+    $("#hobbiesAndPlans").append(HTMLplans);
+    for (plan = 0; plan < hobbies.plans.length; plan++) {
+        $("#hobbiesAndPlans").append(HTMLplansStart);
+        
+        var formattedTitle = HTMLplansTitle.replace("%data%", hobbies.plans[plan].title);
+        $(".hobbies-entry:last").append(formattedTitle);
+        
+        var formattedDescription = HTMLplansDescription.replace("%data%", hobbies.plans[plan].description);
+        $(".hobbies-entry:last").append(formattedDescription);
+    }
+};
+
+// display 'hobbies'
+hobbies.display();
 
 // mouse click coordinate finder
 $(document).click(function(loc) {
