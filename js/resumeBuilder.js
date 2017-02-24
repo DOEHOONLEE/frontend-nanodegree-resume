@@ -145,6 +145,10 @@ var activities ={
         "name": "ASL",
         "description": "Learning American Sign Language!",
         "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
+    }, {
+        "name": "member of GTC",
+        "description": "Volunteer as a translator for online courses",
+        "url": "http://www.coursera.community/"
     }],
     "plans": [{
         "title": "Volunteer activities in other countries",

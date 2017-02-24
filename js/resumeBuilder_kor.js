@@ -145,6 +145,10 @@ var activities ={
         "name": "ASL",
         "description": "영어 수화를 공부 중",
         "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
+    }, {
+        "name": "GTC 멤버",
+        "description": "인터넷 강의 번역 봉사활동",
+        "url": "http://www.coursera.community/"
     }],
     "plans": [{
         "title": "해외 봉사",
