@@ -345,6 +345,8 @@ activities.display = function() {
         
         var formattedDescription = HTMLhobbiesDescription.replace("%data%", activities.activities[hobby].description);
         $(".hobbies-entry:last").append(formattedDescription);
+        
+        $(".hobbies-entry:last a").attr("href", activities.activities[hobby].url);
     }
     
     $("#activitiesAndPlans").append(HTMLplans);
@@ -356,6 +358,8 @@ activities.display = function() {
         
         var formattedDescription = HTMLplansDescription.replace("%data%", activities.plans[plan].description);
         $(".hobbies-entry:last").append(formattedDescription);
+        
+        $(".hobbies-entry:last a").attr("href", activities.plans[hobby].url);
     }
 };
 
