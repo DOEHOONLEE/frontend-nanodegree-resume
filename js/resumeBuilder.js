@@ -46,7 +46,7 @@ var education = {
         "url": "http://www.tjoeun.co.kr/"
     }],
     "onlineCourses": [{
-        "title": "Front-End Nanodegree",
+        "title": "Front-End Web Development Nanodegree",
         "school": "Udacity",
         "dates": "ongoing - expected end date : 2017  Spring",
         "url": "https://www.udacity.com/"
