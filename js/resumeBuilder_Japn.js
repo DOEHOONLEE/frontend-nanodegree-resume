@@ -9,7 +9,7 @@ var bio = {
         "location": "Seoul, Korea"
     },
     "welcomeMessage": "私の履歴書 <br>&#183; 好きなこと <br>&#183; できること <br>&#183; プロジェクト <br>&#183; 学校 <br>&#183; 連絡先",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; Python", "&#183; 日本語", "&#183; 英語", "&#183; 韓国語"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; PHP","&#183; SQL", "&#183; Python", "&#183; 日本語", "&#183; 英語", "&#183; 韓国語"],
     "biopic": "images/my_photo.jpg"
 };
 

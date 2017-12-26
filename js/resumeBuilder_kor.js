@@ -9,7 +9,7 @@ var bio = {
         "location": "대한민국, 서울"
     },
     "welcomeMessage": "온라인 이력서 입니다. <br>&#183; 내가 좋아하는 것들 <br>&#183; 기술들 <br>&#183; 진행한 프로젝트 <br>&#183; 학력 <br>&#183; 연락처",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python", "&#183; Photoshop", "&#183; Illustrator", "&#183; 일본어", "&#183; 영어", "&#183; 한국어"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; PHP","&#183; SQL", "&#183; jQuery", "&#183; Python", "&#183; Photoshop", "&#183; Illustrator", "&#183; 일본어", "&#183; 영어", "&#183; 한국어"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -97,24 +97,30 @@ var projects = {
 // object 'certificates'
 
 var certificates = {
-    "certificates": [{
+    "certificates": [/*{
         "title": "신경 의학",
         "issuedBy": "Duke University",
         "date": "일시정지 - 예정 완료일: 2017년 여름",
         "description": "신경 의학을 다루는 인터넷 강의 수료",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
-    }, {
+    },*/ {
         "title": "1종 대형 면허",
-        "issuedBy": "",
-        "date": "2017년 3월 수료 예정",
+        "issuedBy": "경찰청",
+        "date": "2017년 3월",
         "description": "화물자동차, 건설기계, 특수 자동차 등 운전 가능",
         "url": "koroad.or.kr"
     }, {
         "title": "모바일 앱 개발전문가 - 1급",
         "issuedBy": "KAIT 한국정보통신진흥협회",
-        "date": "현재 시험 대비중 - 시험 날짜: 2017년 3월",
+        "date": "2017년 3월",
         "description": "모바일 앱 제작/기술 관련",
         "url": "http://www.ihd.or.kr/guidemap.do"
+    },  {
+        "title": "GTQ - 포토샵",
+        "issuedBy": "KPC",
+        "date": "2017년 4월",
+        "description": "모바일 앱 제작/기술 관련",
+        "url": "http://www.gtq.or.kr/"
     }, {
         "title": "CPR/AED-HCP : 인공호흡/ 자동 제세동기",
         "issuedBy": "CANADIAN RED CROSS - 캐나다 적십자",

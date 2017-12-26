@@ -9,7 +9,7 @@ var bio = {
         "location": "Seoul, Korea"
     },
     "welcomeMessage": "Hello. This is my online resume. Here, you can find out.. <br>&#183; what I like to do <br>&#183; what skills I have <br>&#183; what projects I have worked on <br>&#183; education background <br>&#183; contact information",
-    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; jQuery", "&#183; Python","&#183; Photoshop", "&#183; Illustrator", "&#183; Japanese", "&#183; English", "&#183; Korean"],
+    "skills": ["&#183; HTML / CSS", "&#183; JavaScript", "&#183; PHP","&#183; SQL", "&#183; jQuery", "&#183; Python","&#183; Photoshop", "&#183; Illustrator", "&#183; Japanese", "&#183; English", "&#183; Korean"],
     "biopic": "images/my_photo.jpg"
 };
 
@@ -97,28 +97,28 @@ var projects = {
 // object 'certificates'
 
 var certificates = {
-    "certificates": [{
+    "certificates": [/*{
         "title": "Medical Neuroscience",
         "issuedBy": "Duke University",
         "date": "Paused for now - expected end date : 2017 summer",
         "description": "Online course about medical neuroscience",
         "url": "https://www.coursera.org/learn/medical-neuroscience/home"
-    }, {
+    },*/ {
         "title": "Type 1 Driver's licence",
-        "issuedBy": "",
-        "date": "Ongoing : expected to end in March, 2017",
+        "issuedBy": "National Police Agency",
+        "date": "2017 - March",
         "description": "Eligible for driving heavy machineries, bus, truck",
         "url": ""
     }, {
         "title": "GTQ - Photoshop",
         "issuedBy": "KPC",
-        "date": "Preparing for the certificate examination in March, 2017",
+        "date": "2017 - April",
         "description": "Internationally recognized photoshop licence",
         "url": "http://www.gtq.or.kr/"
     }, {
         "title": "Mobile Application development Professional - Class 1",
         "issuedBy": "KAIT Korea Association for ICT Promotion",
-        "date": "Preparing for the certificate examination in March, 2017",
+        "date": "2017 - March",
         "description": "Developing Mobile application",
         "url": "http://www.ihd.or.kr/guidemap.do"
     }, {
