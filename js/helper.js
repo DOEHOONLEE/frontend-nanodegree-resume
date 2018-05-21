@@ -54,7 +54,7 @@ var HTMLschoolTwoDates = '<div class="date-text">%data%</div>';
 var HTMLschoolTwoLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolTwoDescription = '<p>%data%</p>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3>Online Classes - PLEASE CLICK TO CHECK CERTIFICATES</h3>';
 var HTMLonlineClassesStart = '<div class="education-entry"></div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';

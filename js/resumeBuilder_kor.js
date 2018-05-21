@@ -50,6 +50,26 @@ var education = {
         "school": "Udacity",
         "dates": "현재 진행중 - 2017년 봄 완료 예정",
         "url": "https://www.udacity.com/"
+    }, {
+        "title": "Introduction to Structured Query Language - SQL",
+        "school": "University of Michigan",
+        "dates": "2018, Jan 5th",
+        "url": "https://www.coursera.org/account/accomplishments/records/6YKGKMF73T24"
+    }, {
+        "title": "Building Web Applications in PHP",
+        "school": "University of Michigan",
+        "dates": "2018, Feb 1st",
+        "url": "https://www.coursera.org/account/accomplishments/records/DL6URZACAKMF"
+    }, {
+        "title": "Responsive Website Basics: Code with HTML, CSS, and JavaScript",
+        "school": "University of London",
+        "dates": "2018, Jan 30th",
+        "url": "https://www.coursera.org/account/accomplishments/records/GX7VWE7NB47M"
+    }, {
+        "title": "Responsive Web Design",
+        "school": "University of London",
+        "dates": "2018, Feb 14th",
+        "url": "https://www.coursera.org/account/accomplishments/records/V4Z6ECB6C6W8"
     }]
 };
 /*
